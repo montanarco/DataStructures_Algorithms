@@ -27,30 +27,28 @@ function readLine() {
  */
 
 function plusMinus(arr) {
-    if(arr.length==0){
-        throw new Error("arra is empty could not operate over it")
+    if (!Array.isArray(arr) || arr.length === 0) {
+        throw new Error("Input must be a non-empty array.");
     }
-    // Write your code here
-    let positives =0;
-    let negatives =0;
-    let zeros = 0;
-    //iterate it and count the positives, negatives and zeros
-    for(let i = 0; i < arr.length; i++){
-        if(arr[i] > 0){
-            positives ++;
-        }
-        if(arr[i] < 0){
-            negatives ++;
-        }
-        if(arr[i] == 0){
-            zeros ++;
-        }
-    }
-    //print ratios with 6 decimals
-    console.log((positives/arr.length).toFixed(6))
-    console.log((negatives/arr.length).toFixed(6))
-    console.log((zeros/arr.length).toFixed(6))
 
+    let positives = 0;
+    let negatives = 0;
+    let zeros = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > 0) {
+            positives++;
+        } else if (arr[i] < 0) {
+            negatives++;
+        } else if (arr[i] === 0) {
+            zeros++;
+        }
+    }
+
+    const arrLength = arr.length;
+    console.log((positives / arrLength).toFixed(6));
+    console.log((negatives / arrLength).toFixed(6));
+    console.log((zeros / arrLength).toFixed(6));
 }
 
 function main() {
