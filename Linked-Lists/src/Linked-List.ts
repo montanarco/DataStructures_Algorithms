@@ -123,3 +123,5 @@ myLinkedList.remove(6);
 myLinkedList.printList();
 myLinkedList.reverse();
 myLinkedList.printList();
+
+console.log(myLinkedList);
