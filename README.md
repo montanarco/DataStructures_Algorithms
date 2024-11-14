@@ -23,6 +23,13 @@ Install TypeScript
 Configure TypeScript
 * npx tsc --init
 
+add this script to your package.json file
+"build": "tsc",
+
+-create a src folder at the project root.
+
+-change this attributes in the tsconfig json file
+
 - to build the type script files run
 npm run build
 
