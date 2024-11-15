@@ -36,7 +36,6 @@ function merge(left: number[], right: number[]) {
         result.push(right[j])
         j ++
     }
-    console.log("result", result)
     return result
 }
 
